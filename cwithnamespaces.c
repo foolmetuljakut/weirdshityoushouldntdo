@@ -1,7 +1,7 @@
 #include "cwithnamespaces.h"
 
-static int fn(int i) {
+namespace_function int fn(int i) {
     return 2*i;
 }
 
-namespace_struct const Namespace = { fn };
+namespace_export(namespace_struct, Namespace) { fn };
